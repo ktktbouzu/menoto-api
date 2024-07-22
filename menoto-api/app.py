@@ -7,6 +7,14 @@ app = Chalice(app_name='menoto-api')
 def index():
     return {'hello': 'world'}
 
+@app.route('/notes', methods=['GET', 'POST'])
+def notes():
+    if app.current_request.method == 'GET':
+        return [ {'id': 1, 'title': 'Sample title'} ]
+    elif app.current_request.method == 'POST':
+        print(app.current_request.json_body)
+        return { 'status': 201 }
+
 
 # The view function above will return {"hello": "world"}
 # whenever you make an HTTP GET request to '/'.
