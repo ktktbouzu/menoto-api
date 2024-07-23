@@ -4,18 +4,18 @@
   "stages": {
     "local": {
       "environment_variables": {
-        "env": "local"
+        "ENV": "local"
       }
     },
     "dev": {
       "api_gateway_stage": "api",
       "environment_variables": {
-        "env": "dev"
+        "ENV": "dev"
       }
     },
     "prod": {
       "environment_variables": {
-        "env": "prod"
+        "ENV": "prod"
       }
     }
   }
